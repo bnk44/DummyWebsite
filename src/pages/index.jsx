@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-
+import {FloatingBtn} from '@/components/FloatingBtn'; 
 
 import Spotifylogo from 'src/images/logos/icons8-spotify.svg'
 
@@ -25,6 +25,9 @@ import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+
+
+
 
 
 
@@ -76,6 +79,7 @@ function Article({ article }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
+    
   )
 }
 
@@ -199,6 +203,7 @@ function Resume() {
 export default function Home({ articles }) {
   return (
     <>
+    <FloatingBtn> </FloatingBtn>
       <Head>
         <title>
           Playlists rendezvous
